@@ -105,7 +105,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link" style="text-decoration: none;">
+      <a href="#" class="brand-link" style="text-decoration: none;">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
         <span class="brand-text font-weight-light">Admin</span>
@@ -138,7 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active">
+                  <a href="./starter.html" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Quản Lý Khóa Học</p>
                   </a>
@@ -189,8 +189,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4 d-inline-flex justify-content-start p-0">
-              <a type="button" href="./add-course.html"
-                class="btn btn-danger w-25 mb-2 text-center fw-bolder">Thoát</a>
+              <a type="button" href="./starter.html" class="btn btn-danger w-25 mb-2 text-center fw-bolder">Thoát</a>
             </div>
             <div class="col-lg-4 text-lg-center">
               <h3><strong>Thêm Khóa Học Mới</strong></h3>
@@ -221,13 +220,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <div class="mb-3 row">
                             <label for="inputNameCourse" class="col-sm-2 col-form-label">Tên khóa học</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputNameCourse" required>
+                              <input type="text" name="txtNameCourse" class="form-control" id="inputNameCourse"
+                                required>
+                              <em for="inputNameCourse"></em>
                             </div>
                           </div>
                           <div class="mb-3 row">
                             <label for="inputCategory" class="col-sm-2 col-form-label">Danh mục</label>
                             <div class="col-sm-10">
-                              <select class="form-select form-select-md mb-3" aria-label="form-select-md example"
+                              <select class="form-select form-select-md mb-3" name="txtCategory" aria-label="form-select-md example"
                                 id="inputCategory" required>
                                 <option selected>Chọn chuyên mục khóa học</option>
                                 <option value="1">One</option>
@@ -240,10 +241,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <label for="inputPriceCourse" class="col-sm-2 col-form-label">Học Phí</label>
                             <div class="col-sm-10">
                               <div class="input-group">
-                                <input type="number" class="form-control" placeholder="" aria-label="Học phí"
+                                <input type="number" name="txtPriceCourse" class="form-control" placeholder="" aria-label="Học phí"
                                   aria-describedby="basic-addon2" id="inputPriceCourse" required>
                                 <span class="input-group-text" id="basic-addon2">VNĐ</span>
                               </div>
+                            </div>
+                          </div>
+                          <div class="mb-3 row">
+                            <label for="inputDescriptionCourse" class="col-sm-2 col-form-label">Mô tả tổng quan</label>
+                            <div class="col-sm-10">
+                              <textarea class="form-control" name="txtDescription" id="inputDescriptionCourse" style="height: 300px;"
+                                required></textarea>
                             </div>
                           </div>
                           <div class="mb-3 row">
@@ -252,18 +260,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="image-content">
                                 <small id="inputImageHelp"></small>
                                 <div class="file-loading">
-                                  <input id="input-b3" name="input-b3[]" type="file" class="file" multiple
+                                  <input id="input-b3" name="input_b3[]" type="file" class="file" multiple
                                     data-show-upload="false" data-show-caption="true"
                                     data-msg-placeholder="Chọn hình đại diện">
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="inputDescriptionCourse" class="col-sm-2 col-form-label">Mô tả tổng quan</label>
-                            <div class="col-sm-10">
-                              <textarea class="form-control" id="inputDescriptionCourse" style="height: 300px;"
-                                required></textarea>
                             </div>
                           </div>
                         </div>
@@ -278,9 +279,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                   </div>
                                 </h3>
                                 <div class="card-tools">
-                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                      class="fas fa-minus"></i>
                                   </button>
-                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                      class="fas fa-times"></i>
                                   </button>
                                 </div>
                               </div>
@@ -296,9 +299,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                   </div>
                                 </h3>
                                 <div class="card-tools">
-                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                      class="fas fa-minus"></i>
                                   </button>
-                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                      class="fas fa-times"></i>
                                   </button>
                                 </div>
                               </div>
@@ -308,8 +313,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                           </div>
                           <div class="mb-3">
-                            <button type="button" class="btn addChapter" id="btnAddChapter" onclick="append(this)" data-number-card-chapter=1 ><i class="fa fa-plus-circle mr-2"></i>Thêm chương</button>
-                          </div> 
+                            <button type="button" class="btn addChapter" id="btnAddChapter" onclick="append(this)"
+                              data-number-card-chapter=1><i class="fa fa-plus-circle mr-2"></i>Thêm chương</button>
+                          </div>
                         </div>
                         <div class="tab-pane fade" id="step3">
                           <h4>Gửi kiểm duyệt khóa học</h4>
@@ -377,8 +383,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script>
     var registrationForm = $('#registration');
     var formValidate = registrationForm.validate({
-      errorClass: 'is-invalid',
-      errorPlacement: () => false
+      errorClass:'is-invalid',
+      errorPlacement: () => false,
+      rules: {
+        txtNameCourse: {
+          required: true,        
+        },
+        txtPriceCourse: {
+          required: true,  
+        },
+        txtDescription: {
+          required: true,
+        },
+        txtCategory: {
+          required: true,
+        },
+      },
+      messages: {
+        txtNameCourse: {
+          required: "Nhập đẩy đủ tên khóa học",
+        },
+        txtPriceCourse: {
+          required: "Nhập đầy đủ giá tiền",
+        },
+        txtDescription: {
+          required: "Nhập đầy đủ mô tả",
+        },
+        txtCategory: {
+          required: "Chọn chuyên mục cho khóa học",
+        },
+      },
     });
     const wizard = new Enchanter('registration', {}, {
       onNext: () => {
