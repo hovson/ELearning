@@ -11452,3 +11452,11 @@ ul.social-network li {
 a {
   text-decoration: none !important;
 }
+
+.carousel-item img {
+  height: 370px;
+}
+
+.custom{
+  margin-left: 68px;
+}
