@@ -31219,3 +31219,9 @@ a.text-muted:hover {
   color: #ffffff;
 }
 /*# sourceMappingURL=adminlte.css.map */
+.addChapter:hover{
+  font-size: medium;
+  font-weight: bold;
+  color: #007bff !important;
+  border: 1px solid #0074f0;
+}
