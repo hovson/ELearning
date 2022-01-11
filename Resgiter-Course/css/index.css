@@ -640,6 +640,10 @@ progress {
   margin-left: auto;
 }
 
+.background-gray {
+  background-color: #F5F5F5;
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -4911,6 +4915,24 @@ textarea.form-control-lg {
   position: relative;
   top: -1px;
 }
+
+.font-bold {
+  font-weight: bold;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.logo > span:nth-child(1) {
+  color: #F26C4F;
+}
+
+.logo > span:nth-child(2) {
+  color: #0975B4;
+}
+
 
 .alert {
   position: relative;
