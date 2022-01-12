@@ -2222,7 +2222,6 @@ progress {
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -6144,6 +6143,22 @@ textarea.form-control-lg {
   background-size: 100% 100%;
 }
 
+.search{
+  width: 400px;
+  display: flex;
+  margin-left: 50px;
+}
+
+.search > input {
+  width: 100%;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.search > button {
+  border-radius: 20px;
+  margin-left: -50px;
+}
 /* rtl:options: {
   "autoRename": true,
   "stringMap":[ {
@@ -11436,4 +11451,12 @@ ul.social-network li {
 
 a {
   text-decoration: none !important;
+}
+
+.carousel-item img {
+  height: 370px;
+}
+
+.custom{
+  margin-left: 68px;
 }
