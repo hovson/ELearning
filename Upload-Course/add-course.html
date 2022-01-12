@@ -221,7 +221,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <label for="inputNameCourse" class="col-sm-2 col-form-label">Tên khóa học</label>
                             <div class="col-sm-10">
                               <input type="text" name="txtNameCourse" class="form-control" id="inputNameCourse"
-                                required>
+                                required value="ssss">
                               <em for="inputNameCourse"></em>
                             </div>
                           </div>
@@ -242,7 +242,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-sm-10">
                               <div class="input-group">
                                 <input type="number" name="txtPriceCourse" class="form-control" placeholder="" aria-label="Học phí"
-                                  aria-describedby="basic-addon2" id="inputPriceCourse" required>
+                                  aria-describedby="basic-addon2" id="inputPriceCourse" required value="11111">
                                 <span class="input-group-text" id="basic-addon2">VNĐ</span>
                               </div>
                             </div>
@@ -251,7 +251,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <label for="inputDescriptionCourse" class="col-sm-2 col-form-label">Mô tả tổng quan</label>
                             <div class="col-sm-10">
                               <textarea class="form-control" name="txtDescription" id="inputDescriptionCourse" style="height: 300px;"
-                                required></textarea>
+                                required>ssss</textarea>
                             </div>
                           </div>
                           <div class="mb-3 row">
@@ -287,28 +287,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                   </button>
                                 </div>
                               </div>
-                              <div class="card-body">
-                                The body of the card
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-header">
-                                <h3 class="card-title w-75">
-                                  <div class="w-75">
-                                    <input type="text" class="form-control w-100" placeholder="Tên chương">
+                              <div class="card-body cardCourse">
+                                <div class="card mb-2">
+                                  <div class="card-header">
+                                    <div class="row">
+                                      <div class="card-title col-8 d-flex align-items-center">
+                                        <div class="w-75 d-flex">
+                                          <input type="text" class="form-control w-100" placeholder="Tên Bài Học">
+                                        </div>
+                                      </div>
+                                      <div class="form-check col-2 d-flex align-items-center">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                          Xem thử
+                                        </label>
+                                      </div>
+                                      <div class="card-tools col-2 pr-0 d-flex justify-content-end align-items-start">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                            class="fas fa-times"></i>
+                                        </button>
+                                      </div>
+                                    </div>
                                   </div>
-                                </h3>
-                                <div class="card-tools">
-                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                      class="fas fa-minus"></i>
-                                  </button>
-                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                      class="fas fa-times"></i>
-                                  </button>
+                                  <div class="card-body">
+                                    The body of the card
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="card-body">
-                                The body of the card
+                                <div class="mb-3">
+                                  <button type="button" class="btn addChapter btnAddCourse" onclick="appendCourse(this)"
+                                    data-number-card-chapter=1><i class="fa fa-plus-circle mr-2"></i>Thêm bài học</button>
+                                </div>
                               </div>
                             </div>
                           </div>
