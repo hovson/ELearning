@@ -21,34 +21,7 @@ function append(event) {
         </div>
         </div>
         <div class="card-body ${classNameCourse}">
-            <div class="card mb-2">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="card-title col-8 d-flex align-items-center">
-                        <div class="w-75 d-flex">
-                            <input type="text" class="form-control w-100" placeholder="Tên Bài Học">
-                        </div>
-                        </div>
-                        <div class="form-check col-2 d-flex align-items-center">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Xem thử
-                            </label>
-                        </div>
-                        <div class="card-tools col-2 pr-0 d-flex justify-content-end align-items-start">
-                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                class="fas fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                The body of the card
-                </div>
-            </div>
+            
         </div>
         <div class="mb-3 ml-3">
             <button type="button" class="btn addChapter btnAddCourse" data-number=1 data-card-number="${classNameCourse}"
@@ -65,7 +38,6 @@ function appendCourse(nameCard, numberCard) {
     var numberCurrentCourse = numberCard;
     var classNameCourse = 'course_' + numberCurrentCourse;
     var cardBody = $(`.${currentCourse}`);
-    console.log(classNameCourse);
 
     cardBody.append(`
     <div class="card mb-3 ${classNameCourse}">
@@ -93,7 +65,45 @@ function appendCourse(nameCard, numberCard) {
             </div>
         </div>
         <div class="card-body">
-            The body of the card
+            <!-- Tabs navs -->
+            <div class="col-xs-12 ">
+            <nav>
+                <div class="nav nav-tabs nav-fill" id="nav-tab-${numberCurrentCourse}" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab-${numberCurrentCourse}" data-toggle="tab" href="#nav-home-${numberCurrentCourse}" role="tab" aria-controls="nav-home" aria-selected="true">Nội Dung Mô Tả</a>
+                <a class="nav-item nav-link" id="nav-profile-tab-${numberCurrentCourse}" data-toggle="tab" href="#nav-profile-${numberCurrentCourse}" role="tab" aria-controls="nav-profile" aria-selected="false">Upload Video</a>
+                <a class="nav-item nav-link" id="nav-contact-tab-${numberCurrentCourse}" data-toggle="tab" href="#nav-contact-${numberCurrentCourse}" role="tab" aria-controls="nav-contact" aria-selected="false">Upload Tài Liệu</a>
+                </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent-${numberCurrentCourse}">
+                <div class="tab-pane fade show active" id="nav-home-${numberCurrentCourse}" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+                    <div class="col-sm-12">
+                    <textarea class="form-control" name="txtDescription"
+                        style="height: 300px;" placeholder="Nội dung mô tả" required>Nội dung mô tả</textarea>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile-${numberCurrentCourse}" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="file-upload file-upload-movie-${numberCurrentCourse}">
+                    <div class="file-select">
+                    <div class="file-select-button" id="fileName">Chọn File</div>
+                    <div class="file-select-name" id="noFileMovie-${numberCurrentCourse}"></div> 
+                    <input type="file" class="chooseFileMovie" name="chooseFileMovie" data-number=${numberCurrentCourse} id="chooseFileMovie-${numberCurrentCourse}">
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact-${numberCurrentCourse}" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="file-upload file-upload-content-${numberCurrentCourse}">
+                    <div class="file-select">
+                    <div class="file-select-button" id="fileName">Chọn File</div>
+                    <div class="file-select-name" id="noFileContent-${numberCurrentCourse}"></div> 
+                    <input type="file" class="chooseFileContent" name="chooseFileContent" data-number=${numberCurrentCourse} id="chooseFileContent-${numberCurrentCourse}">
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Tabs content -->
         </div>
     </div>`
     );
@@ -115,4 +125,37 @@ $(document).ready(() => {
         numberCard = parseInt(numberCard) + 1;
         $(this).attr('data-number', numberCard);
     });
+
+    $('.tab-content').on('click change','.chooseFileContent', function () {
+        var currentInput = $(this).attr('data-number');
+        var currentClassName = 'chooseFileContent-' + currentInput;
+        var classFileName = '#chooseFileContent-' + currentInput;
+        var classFileUpload = '.file-upload-content-' + currentInput;
+        var filename = $(`${classFileName}`).val();
+        if (/^\s*$/.test(filename)) {
+          $(`${classFileUpload}`).removeClass('active');
+          $(`#noFileContent-${currentInput}`).text(""); 
+        }
+        else {
+          $(`${classFileUpload}`).addClass('active');
+          $(`#noFileContent-${currentInput}`).text(filename.replace("C:\\fakepath\\", "")); 
+        }
+    });
+
+    $('.tab-content').on('click change','.chooseFileMovie', function () {
+        var currentInput = $(this).attr('data-number');
+        var currentClassName = 'chooseFileMovie-' + currentInput;
+        var classFileName = '#chooseFileMovie-' + currentInput;
+        var classFileUpload = '.file-upload-movie-' + currentInput;
+        var filename = $(`${classFileName}`).val();
+        if (/^\s*$/.test(filename)) {
+          $(`${classFileUpload}`).removeClass('active');
+          $(`#noFileMovie-${currentInput}`).text(""); 
+        }
+        else {
+          $(`${classFileUpload}`).addClass('active');
+          $(`#noFileMovie-${currentInput}`).text(filename.replace("C:\\fakepath\\", "")); 
+        }
+    });
 });
+
