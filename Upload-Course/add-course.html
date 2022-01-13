@@ -294,7 +294,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-auto">
                           <button type="button" class="btn btn-primary" data-enchanter="next">Tiếp Tục<i
                               class="fa fa-arrow-right ml-2"></i></button>
-                          <button type="submit" class="btn btn-primary" data-enchanter="finish">Gửi Kiểm Duyệt<i
+                          <button type="button" class="btn btn-primary" data-enchanter="finish" onclick="submitSuccess(this)">Gửi Kiểm Duyệt<i
                               class="fa fa-paper-plane ml-2"></i></button>
                         </div>
                       </div>
@@ -306,6 +306,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           <!-- /.row -->
         </div><!-- /.container-fluid -->
+        <!-- /.col -->
+        <div id="output">
+        </div>
+        <!-- /.col -->
       </div>
       <!-- /.content -->
     </div>

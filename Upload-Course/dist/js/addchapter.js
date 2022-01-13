@@ -109,16 +109,42 @@ function appendCourse(nameCard, numberCard) {
     );
 }
 
+function submitSuccess(event) {
+    $('#output').html(
+        `<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-confirm" role="document">
+                <div class="modal-content" style="height:130px; color:white; background-color:#00BA58; border-radius:10px;">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-tool mt-1 mr-1" id="btnCloseModal" data-card-widget="remove" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0 w-100">
+                        <div class="fade show w-100 pl-4" role="alert">
+                            <h4 class="alert-heading"><i class="fa fa-check"></i> Gửi Thành Công</h4>
+                            <h5>Vui lòng đợi hệ thống phê duyệt</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    $('#myModal').modal("show");
+    setTimeout(
+        function () {
+            location.href = `./starter.html`;
+    }, 1000);
+}
+
 $(document).ready(() => {
-    $("#cardBody").on('click', '.btnRemoveCard', function() {
+    $("#cardBody").on('click', '.btnRemoveCard', function () {
         var nameCard = $(this).attr('data-card-number');
         var cardRemove = '.' + nameCard;
-        setTimeout(function() {
+        setTimeout(function () {
             $(`${cardRemove}`).remove();
         }, 1000);
     });
 
-    $("#cardBody").on('click', '.btnAddCourse', function() {
+    $("#cardBody").on('click', '.btnAddCourse', function () {
         var nameCard = $(this).attr('data-card-number');
         var numberCard = $(this).attr('data-number');
         appendCourse(nameCard, numberCard);
@@ -126,36 +152,40 @@ $(document).ready(() => {
         $(this).attr('data-number', numberCard);
     });
 
-    $('.tab-content').on('click change','.chooseFileContent', function () {
+    $('.tab-content').on('click change', '.chooseFileContent', function () {
         var currentInput = $(this).attr('data-number');
         var currentClassName = 'chooseFileContent-' + currentInput;
         var classFileName = '#chooseFileContent-' + currentInput;
         var classFileUpload = '.file-upload-content-' + currentInput;
         var filename = $(`${classFileName}`).val();
         if (/^\s*$/.test(filename)) {
-          $(`${classFileUpload}`).removeClass('active');
-          $(`#noFileContent-${currentInput}`).text(""); 
+            $(`${classFileUpload}`).removeClass('active');
+            $(`#noFileContent-${currentInput}`).text("");
         }
         else {
-          $(`${classFileUpload}`).addClass('active');
-          $(`#noFileContent-${currentInput}`).text(filename.replace("C:\\fakepath\\", "")); 
+            $(`${classFileUpload}`).addClass('active');
+            $(`#noFileContent-${currentInput}`).text(filename.replace("C:\\fakepath\\", ""));
         }
     });
 
-    $('.tab-content').on('click change','.chooseFileMovie', function () {
+    $('.tab-content').on('click change', '.chooseFileMovie', function () {
         var currentInput = $(this).attr('data-number');
         var currentClassName = 'chooseFileMovie-' + currentInput;
         var classFileName = '#chooseFileMovie-' + currentInput;
         var classFileUpload = '.file-upload-movie-' + currentInput;
         var filename = $(`${classFileName}`).val();
         if (/^\s*$/.test(filename)) {
-          $(`${classFileUpload}`).removeClass('active');
-          $(`#noFileMovie-${currentInput}`).text(""); 
+            $(`${classFileUpload}`).removeClass('active');
+            $(`#noFileMovie-${currentInput}`).text("");
         }
         else {
-          $(`${classFileUpload}`).addClass('active');
-          $(`#noFileMovie-${currentInput}`).text(filename.replace("C:\\fakepath\\", "")); 
+            $(`${classFileUpload}`).addClass('active');
+            $(`#noFileMovie-${currentInput}`).text(filename.replace("C:\\fakepath\\", ""));
         }
+    });
+
+    $('#output').on('click', '#btnCloseModal',function(){
+        $('#myModal').modal("hide");
     });
 });
 
