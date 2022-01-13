@@ -11460,3 +11460,10 @@ a {
 .custom{
   margin-left: 68px;
 }
+
+.card-custom {
+  background-color: white;
+  width: 500px; 
+  margin-left: 20px;
+  border-radius: 10px;
+}
