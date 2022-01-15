@@ -88,7 +88,7 @@ function appendCourse(nameCard, numberCard) {
                     <div class="file-select">
                     <div class="file-select-button" id="fileName">Chọn File</div>
                     <div class="file-select-name" id="noFileMovie-${numberCurrentCourse}"></div> 
-                    <input type="file" class="chooseFileMovie" name="chooseFileMovie" data-number=${numberCurrentCourse} id="chooseFileMovie-${numberCurrentCourse}">
+                    <input type="file" class="chooseFileMovie" name="chooseFileMovie" data-number=${numberCurrentCourse} id="chooseFileMovie-${numberCurrentCourse}" accept="video/mp4,video/x-m4v,video/*">
                     </div>
                 </div>
                 </div>
@@ -129,10 +129,10 @@ function submitSuccess(event) {
         </div>`
     );
     $('#myModal').modal("show");
-    setTimeout(
-        function () {
-            location.href = `./starter.html`;
-    }, 1000);
+    // setTimeout(
+    //     function () {
+    //         location.href = `./starter.html`;
+    // }, 1000);
 }
 
 $(document).ready(() => {

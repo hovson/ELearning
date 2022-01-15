@@ -108,7 +108,7 @@
 
       <div class="container d-flex justify-content-center mt-5 mb-5">
         <div class="row g-3">
-            <div class="col-md-12"> <span>Phương thức thanh toán</span>
+            <div class="col-md-12"> <span style="font-weight: bold; font-size: 20px;">Phương thức thanh toán</span>
                 <div class="card">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
@@ -117,7 +117,7 @@
                                         <div class="d-flex align-items-center justify-content-between"> <span>Ví MOMO</span> <img  src="./img/logo-momo.png" width="30"> </div>
                                     </button> </h2>
                                     <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <img  class = "p-lg-3 mrauto "src="./img/momo-code.png" width="50%" >
+                                        <img  class = "p-lg-3 mrauto "src="./img/momo-code.png" width="50%" onclick="goToSucess()">
                                     </div>
                             </div>
                         </div>
@@ -289,3 +289,10 @@
 
 
 </html>
+
+
+<script>
+  function goToSucess(){
+    window.location.href = "/Resgiter-Course/register-success.html";
+  }
+</script>
