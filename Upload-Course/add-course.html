@@ -249,8 +249,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <div class="mb-3 row">
                             <label for="inputDescriptionCourse" class="col-sm-2 col-form-label">Mô tả tổng quan</label>
                             <div class="col-sm-10">
-                              <textarea class="form-control" name="txtDescription" id="inputDescriptionCourse" style="height: 300px;"
-                                required>ssss</textarea>
+                              <textarea class="form-control" name="txtDescription" id="inputDescriptionCourse"
+                                style="height: 300px;" required>ssss</textarea>
                             </div>
                           </div>
                           <div class="mb-3 row">
@@ -270,57 +270,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="tab-pane fade" id="step2">
                           <h4>Nội dung khóa học</h4>
                           <div class="mb-3" id="cardBody">
-                            <div class="card mb-3">
-                              <div class="card-header">
-                                <h3 class="card-title w-75">
-                                  <div class="w-75">
-                                    <input type="text" class="form-control w-100" placeholder="Tên chương">
-                                  </div>
-                                </h3>
-                                <div class="card-tools">
-                                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                      class="fas fa-minus"></i>
-                                  </button>
-                                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                      class="fas fa-times"></i>
-                                  </button>
-                                </div>
-                              </div>
-                              <div class="card-body cardCourse">
-                                <div class="card mb-2">
-                                  <div class="card-header">
-                                    <div class="row">
-                                      <div class="card-title col-8 d-flex align-items-center">
-                                        <div class="w-75 d-flex">
-                                          <input type="text" class="form-control w-100" placeholder="Tên Bài Học">
-                                        </div>
-                                      </div>
-                                      <div class="form-check col-2 d-flex align-items-center">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                          Xem thử
-                                        </label>
-                                      </div>
-                                      <div class="card-tools col-2 pr-0 d-flex justify-content-end align-items-start">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
-                                            class="fas fa-minus"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                            class="fas fa-times"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="card-body">
-                                    The body of the card
-                                  </div>
-                                </div>
-                                <div class="mb-3">
-                                  <button type="button" class="btn addChapter btnAddCourse" onclick="appendCourse(this)"
-                                    data-number-card-chapter=1><i class="fa fa-plus-circle mr-2"></i>Thêm bài học</button>
-                                </div>
-                              </div>
-                            </div>
+                            
                           </div>
                           <div class="mb-3">
                             <button type="button" class="btn addChapter" id="btnAddChapter" onclick="append(this)"
@@ -342,7 +292,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-auto">
                           <button type="button" class="btn btn-primary" data-enchanter="next">Tiếp Tục<i
                               class="fa fa-arrow-right ml-2"></i></button>
-                          <button type="submit" class="btn btn-primary" data-enchanter="finish">Gửi Kiểm Duyệt<i
+                          <button type="button" class="btn btn-primary" data-enchanter="finish" onclick="submitSuccess(this)">Gửi Kiểm Duyệt<i
                               class="fa fa-paper-plane ml-2"></i></button>
                         </div>
                       </div>
@@ -354,6 +304,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           <!-- /.row -->
         </div><!-- /.container-fluid -->
+        <!-- /.col -->
+        <div id="output">
+        </div>
+        <!-- /.col -->
       </div>
       <!-- /.content -->
     </div>
@@ -393,14 +347,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script>
     var registrationForm = $('#registration');
     var formValidate = registrationForm.validate({
-      errorClass:'is-invalid',
+      errorClass: 'is-invalid',
       errorPlacement: () => false,
       rules: {
         txtNameCourse: {
-          required: true,        
+          required: true,
         },
         txtPriceCourse: {
-          required: true,  
+          required: true,
         },
         txtDescription: {
           required: true,
