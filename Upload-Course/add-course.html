@@ -201,15 +201,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="row justify-content-center">
                   <div class="col-md-12 col-lg-10">
                     <form action="" method="post" id="registration">
-                      <nav>
+                      <nav >
                         <div class="nav nav-pills nav-fill d-flex justify-content-around" id="nav-tab" role="tablist">
-                          <div class="nav-link active pointer" id="step1-tab" data-bs-toggle="tab" href="#step1"
+                          <div class="nav-link active pointer border border-primary" id="step1-tab" data-bs-toggle="tab" href="#step1"
                             disabled>Bước
                             1: Tạo Mô Tả</div>
-                          <div class="nav-link pointer" id="step2-tab" data-bs-toggle="tab" href="#step2" disabled>Bước
+                          <div class="nav-link pointer border border-primary ml-3" id="step2-tab" data-bs-toggle="tab" href="#step2" disabled>Bước
                             2: Tạo
                             Nội Dung</div>
-                          <div class="nav-link pointer" id="step3-tab" data-bs-toggle="tab" href="#step3" disabled>Bước
+                          <div class="nav-link pointer border border-primary ml-3" id="step3-tab" data-bs-toggle="tab" href="#step3" disabled>Bước
                             3: Gửi
                             Kiểm Duyệt</div>
                         </div>
@@ -220,20 +220,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <div class="mb-3 row">
                             <label for="inputNameCourse" class="col-sm-2 col-form-label">Tên khóa học</label>
                             <div class="col-sm-10">
-                              <input type="text" name="txtNameCourse" class="form-control" id="inputNameCourse" required
-                                value="ssss">
+                              <input type="text" name="txtNameCourse" class="form-control" id="inputNameCourse"
+                                required value="Khóa học guitar trong 30 ngày">
                               <em for="inputNameCourse"></em>
                             </div>
                           </div>
                           <div class="mb-3 row">
                             <label for="inputCategory" class="col-sm-2 col-form-label">Danh mục</label>
                             <div class="col-sm-10">
-                              <select class="form-select form-select-md mb-3" name="txtCategory"
-                                aria-label="form-select-md example" id="inputCategory" required>
-                                <option selected>Chọn chuyên mục khóa học</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                              <select class="form-select form-select-md mb-3" name="txtCategory" aria-label="form-select-md example"
+                                id="inputCategory" required>
+                                <option selected>Âm nhạc</option>
+                                <option value="1">Tiếng anh</option>
+                                <option value="2">Lập trình</option>
                               </select>
                             </div>
                           </div>
@@ -241,9 +240,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <label for="inputPriceCourse" class="col-sm-2 col-form-label">Học Phí</label>
                             <div class="col-sm-10">
                               <div class="input-group">
-                                <input type="number" name="txtPriceCourse" class="form-control" placeholder=""
-                                  aria-label="Học phí" aria-describedby="basic-addon2" id="inputPriceCourse" required
-                                  value="11111">
+                                <input type="number" name="txtPriceCourse" class="form-control" placeholder="" aria-label="Học phí"
+                                  aria-describedby="basic-addon2" id="inputPriceCourse" required value="200.000">
                                 <span class="input-group-text" id="basic-addon2">VNĐ</span>
                               </div>
                             </div>
