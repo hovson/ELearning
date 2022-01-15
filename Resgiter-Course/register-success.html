@@ -104,85 +104,153 @@
 
 
       </div>
-    </div>
 
-      <div class="container d-flex justify-content-center mt-5 mb-5">
-        <div class="row g-3">
-            <div class="col-md-12"> <span>Phương thức thanh toán</span>
-                <div class="card">
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header p-0" id="headingOne">
-                                <h2 class="mb-0"> <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <div class="d-flex align-items-center justify-content-between"> <span>Ví MOMO</span> <img  src="./img/logo-momo.png" width="30"> </div>
-                                    </button> </h2>
-                                    <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <img  class = "p-lg-3 mrauto "src="./img/momo-code.png" width="50%" >
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header p-0" id="headingThree">
-                                <h2 class="mb-0"> <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <div class="d-flex align-items-center justify-content-between"> <span>VN PAY</span> <img  src="./img/logo-vnpay.png" width="30"> </div>
-                                    </button> </h2>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <img  class = "p-lg-3 mrauto "src="./img/vnpay-code.png" width="50%">
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header p-0">
-                                <h2 class="mb-0"> <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="d-flex align-items-center justify-content-between"> <span style="font-size: 40">Credit card</span>
-                                            <div class="icons"> <img src="./img/logo-master-card.png" width="50"> <img src="./img/visa.png" width="50"> <img src="./img/paypal.png" width="50"> <img src="./img/america-express.png" width="50"> </div>
-                                        </div>
-                                    </button> </h2>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body payment-card-body"> <span class="font-weight-normal card-text">Card Number</span>
-                                    <div class="input"> <i class="fa fa-credit-card"></i> <input type="text" class="form-control" placeholder="0000 0000 0000 0000"> </div>
-                                    <div class="row mt-3 mb-3">
-                                        <div class="col-md-6"> <span class="font-weight-normal card-text">Expire Date</span>
-                                            <div class="input"> <i class="fa fa-calendar"></i> <input type="text" class="form-control" placeholder="MM/YY"> </div>
-                                        </div>
-                                        <div class="col-md-6"> <span class="font-weight-normal card-text">CVC/CVV</span>
-                                            <div class="input"> <i class="fa fa-lock"></i> <input type="text" class="form-control" placeholder="000"> </div>
-                                        </div>
-                                    </div> <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Giao dịch của bạn được bảo mật bằng chứng chỉ SSL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="row gx-4 gx-lg-5 mb-4">
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100" onclick="gotoDetailPage()">
+
+            <img src="./img/course-guitar.png" class="card-img-top mx-auto" style="width: 100%; height: 150px;"
+              alt="Laptop"/>
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0 ">Khoá học guitar trong 100 ngày</h5>
+                <!-- <h5 class="text-dark mb-0">$999</h5> -->
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <h6 class="text-dark mb-0">600.000 VNĐ</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Bùi Đăng Khoa</a></p>
+              </div>
+
+
+              <div class="d-flex justify-content-md-between">
+                <div class="text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
                 </div>
-            </div>
-            <div class="col-md-12"> <span>Thông tin thanh toán</span>
-                <div class="card">
-                    <div class="d-flex justify-content-between p-3">
-                        <div class="d-flex flex-column"> <span>Tên khóa học</span> </div>
-                        <div class="mt-1"> <span class="super-month"><b>Khóa học Guitar trong 30 ngày</b></span> </div>
-                    </div>
-                    <hr class="mt-0 line">
-                    <div class="p-3">
-                        <div class="d-flex justify-content-between mb-2"> <span>Giá</span> <span>600,000 vnđ</span> </div>
-                        <div class="d-flex justify-content-between"> <span>Giảm giá <i class="fa fa-clock-o"></i></span> <span>67%</span> </div>
-                    </div>
-                    <hr class="mt-0 line">
-                    <div class="p-3 d-flex justify-content-between">
-                        <div class="d-flex flex-column"> <span>Tổng giá trị khóa học</span> </div> <span>199,000 vnđ</span>
-                    </div>
-                    <div class="p-3 m-auto d-flex justify-content-between"> <a href="/Resgiter-Course/register-success.html"><button class="btn btn-primary btn-block free-button" margin="auto">Thanh toán</button></a></div>
+                <!-- <p>&emsp; &emsp; &emsp;</p> -->
+                <div>
+                  <p class="text-muted mb-2">6 đánh giá</p>
                 </div>
+
+
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100">
+
+            <img src="./img/course-dizi.png" class="card-img-top" style="width: 100%; height: 150px;"
+              alt="Laptop" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0 ">Khoá học sáo Dizi trong 10 ngày</h5>
+                <!-- <h5 class="text-dark mb-0">$999</h5> -->
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <h6 class="text-dark mb-0">500.000 VNĐ</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Bùi Đăng Khoa</a></p>
+              </div>
+
+
+              <div class="d-flex justify-content-md-between">
+                <div class="text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half" aria-hidden="true"></i>
+                </div>
+                <!-- <p>&emsp; &emsp; &emsp;</p> -->
+                <div>
+                  <p class="text-muted mb-2">10 đánh giá</p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100">
+
+            <img src="./img/course-chef.png" class="card-img-top"
+              alt="Laptop" style="width: 100%; height: 150px;" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">Nấu ăn không khó</h5>
+                <!-- <h5 class="text-dark mb-0">$999</h5> -->
+              </div>
+              <div class="d-flex justify-content-between mb-3" style="margin-top: 42px;">
+                <h6 class="text-dark mb-0">150.000 VNĐ</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Ngô Tiến Thiện</a></p>
+              </div>
+
+
+              <div class="d-flex justify-content-md-between">
+                <div class="text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <!-- <p>&emsp; &emsp; &emsp;</p> -->
+                <div>
+                  <p class="text-muted mb-2">12 đánh giá</p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100">
+
+            <img src="./img/course-english.png" class="card-img-top"
+              alt="Laptop" style="width: 100%; height: 150px;"/>
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0 ">Tiếng anh giao tiếp</h5>
+                <!-- <h5 class="text-dark mb-0">$999</h5> -->
+              </div>
+              <div class="d-flex justify-content-between mb-3" style="margin-top: 42px;">
+                <h6 class="text-dark mb-0">2.000.000 VNĐ</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Khương Nguyễn</a></p>
+              </div>
+
+
+              <div class="d-flex justify-content-md-between">
+                <div class="text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <!-- <p>&emsp; &emsp; &emsp;</p> -->
+                <div>
+                  <p class="text-muted mb-2">25 đánh giá</p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    
-
-
-
-
-
   
   <!-- Footer-->
   <footer class="text-center text-lg-start text-white" style="background-color: #292828">
