@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-white">
     <div class="container px-5">
       <div class="navbar-brand">
-        <div class="logo">
+        <div class="logo" style="cursor: pointer;" onclick="gotoHomePage()">
           <span>E</span>
           <span>Learning</span>
         </div>
@@ -601,4 +601,8 @@
 
 
   })(jQuery);
+
+  function gotoHomePage(){
+    window.location.href = "/Resgiter-Course/index.html";
+  }
 </script>
