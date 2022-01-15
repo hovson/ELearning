@@ -27,7 +27,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-white">
     <div class="container px-5">
       <div class="navbar-brand">
-        <div class="logo">
+        <div class="logo" style="cursor: pointer;" onclick="gotoHomePage()">
           <span>E</span>
           <span>Learning</span>
         </div>
@@ -41,6 +41,15 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fa fa-user-circle"></i> Văn Sơn
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Tài khoản</a>
+              <a class="dropdown-item" href="#">Đăng xuất</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -52,9 +61,9 @@
     <!-- Page Content-->
     <div class="container px-4 px-lg-5">
         <!-- Heading Row-->
-        <div class="row gx-4 gx-lg-5 align-items-center" style="background-color: #0975B4; color: aliceblue;">
+        <div class="row gx-4 gx-lg-5 align-items-center" style="background-color: #0975B4; color: aliceblue; margin-bottom: 30px;">
           <div class="col-lg-12">
-              <span >Elearning >> Ngoại ngữ >> Khoá học guitar trong 30 ngày>> Thanh Toán</span>
+              <span >Elearning >> Ngoại ngữ >> Khoá học guitar trong 30 ngày >> Thanh Toán</span>
               <div style="font-size: 30px;">Khoá học guitar trong 30 ngày</div>
               <div class="mb-4">Giúp học viên thành thạo, tự tin đệm đàn hát cơ bản trong 30 ngày</div>
               <div class="row gx-4 gx-lg-5 mb-2">
@@ -105,25 +114,82 @@
 
       </div>
 
-    <div class="row gx-4 gx-lg-5 mb-4">
-        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
-          <div class="card h-100" onclick="gotoDetailPage()">
+      <div class="row gx-4 gx-lg-5 align-items-center mt-3 mb-3"style="background-color: green; border-radius: 10px; color: aliceblue; height: 160px;">
+        <div class="d-flex">
+          <i class="fa fa-check-circle-o fa-5x" aria-hidden="true" style="display: block;"></i>
+          <div style="display: block; font-weight: bold; font-size: 30px; margin: auto;
+          ">Chúc mừng bạn đã đăng ký thành công "Khóa học guitar trong 30 ngày"</div>
+        </div>
+        
+      </div>
 
-            <img src="./img/course-guitar.png" class="card-img-top mx-auto" style="width: 100%; height: 150px;"
-              alt="Laptop"/>
+      <div class="row gx-4 gx-lg-5 align-items-center mt-3" style="margin-bottom: 40px;">
+        <div class="d-flex" style="margin: auto; width: fit-content;">
+          <a name="" id="" class="btn btn-primary " style="font-weight: bold; font-size: 25px; width: 500px; margin-right: 10px;" 
+          href="/Resgiter-Course/index.html" role="button">Về trang chủ</a>
+          <a name="" id="" class="btn btn-primary" style="font-weight: bold; font-size: 25px; width: 500px;" 
+          href="/Resgiter-Course/LearnCourse/index.html" role="button">Bắt đầu Khóa học</a>
+        </div>
+      </div>
+
+
+
+      <h4 class="mb-3" style="font-weight: bold;">KHOÁ HỌC LIÊN QUAN</h4>
+      <div class="row gx-4 gx-lg-5 mb-5">
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100">
+  
+            <img src="./img/course-ukulele.PNG" class="card-img-top mx-auto" style="width: 100%; height: 150px;"
+              alt="Laptop" />
             <div class="card-body">
               <div class="d-flex justify-content-between mb-3">
-                <h5 class="mb-0 ">Khoá học guitar trong 100 ngày</h5>
+                <h5 class="mb-0 ">Khoá học ukulele cho người mới chơi</h5>
                 <!-- <h5 class="text-dark mb-0">$999</h5> -->
               </div>
               <div class="d-flex justify-content-between mb-3">
-                <h6 class="text-dark mb-0">600.000 VNĐ</h6>
+                <h6 class="text-dark mb-0">1.200.000 VNĐ</h6>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="small"><a href="#!" class="text-muted">Giáo viên: Bùi Đăng Khoa</a></p>
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: David Hiếu</a></p>
               </div>
-
-
+  
+  
+              <div class="d-flex justify-content-md-between">
+                <div class="text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <!-- <p>&emsp; &emsp; &emsp;</p> -->
+                <div>
+                  <p class="text-muted mb-2">6 đánh giá</p>
+                </div>
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
+          <div class="card h-100">
+  
+            <img src="./img/saotruc.jpg" class="card-img-top" alt="Laptop" style="width: 100%; height: 150px;" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0 ">Chinh phục sáo trúc và nhạc lý thật đơn giản</h5>
+                <!-- <h5 class="text-dark mb-0">$999</h5> -->
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <h6 class="text-dark mb-0">400.000 VNĐ</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Lê Thành An</a></p>
+              </div>
+  
+  
               <div class="d-flex justify-content-md-between">
                 <div class="text-warning">
                   <i class="fa fa-star"></i>
@@ -134,104 +200,65 @@
                 </div>
                 <!-- <p>&emsp; &emsp; &emsp;</p> -->
                 <div>
-                  <p class="text-muted mb-2">6 đánh giá</p>
+                  <p class="text-muted mb-2">9 đánh giá</p>
                 </div>
-
-
+  
+  
               </div>
             </div>
           </div>
         </div>
-
+  
         <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
           <div class="card h-100">
-
-            <img src="./img/course-dizi.png" class="card-img-top" style="width: 100%; height: 150px;"
-              alt="Laptop" />
+  
+            <img src="./img/nhac.jpg" class="card-img-top" alt="Laptop" style="width: 100%; height: 150px;" />
             <div class="card-body">
               <div class="d-flex justify-content-between mb-3">
-                <h5 class="mb-0 ">Khoá học sáo Dizi trong 10 ngày</h5>
+                <h5 class="mb-0 ">Viết nhạc - Không cần biết nhạc</h5>
                 <!-- <h5 class="text-dark mb-0">$999</h5> -->
               </div>
               <div class="d-flex justify-content-between mb-3">
                 <h6 class="text-dark mb-0">500.000 VNĐ</h6>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="small"><a href="#!" class="text-muted">Giáo viên: Bùi Đăng Khoa</a></p>
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Hồ Văn Sơn</a></p>
               </div>
-
-
+  
+  
               <div class="d-flex justify-content-md-between">
                 <div class="text-warning">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star-half" aria-hidden="true"></i>
+                  <i class="fa fa-star-half"></i>
                 </div>
                 <!-- <p>&emsp; &emsp; &emsp;</p> -->
                 <div>
-                  <p class="text-muted mb-2">10 đánh giá</p>
+                  <p class="text-muted mb-2">198 đánh giá</p>
                 </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
-          <div class="card h-100">
-
-            <img src="./img/course-chef.png" class="card-img-top"
-              alt="Laptop" style="width: 100%; height: 150px;" />
-            <div class="card-body">
-              <div class="d-flex justify-content-between mb-3">
-                <h5 class="mb-0">Nấu ăn không khó</h5>
-                <!-- <h5 class="text-dark mb-0">$999</h5> -->
-              </div>
-              <div class="d-flex justify-content-between mb-3" style="margin-top: 42px;">
-                <h6 class="text-dark mb-0">150.000 VNĐ</h6>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="small"><a href="#!" class="text-muted">Giáo viên: Ngô Tiến Thiện</a></p>
-              </div>
-
-
-              <div class="d-flex justify-content-md-between">
-                <div class="text-warning">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-                <!-- <p>&emsp; &emsp; &emsp;</p> -->
-                <div>
-                  <p class="text-muted mb-2">12 đánh giá</p>
-                </div>
-
-
+  
+  
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;">
           <div class="card h-100">
-
-            <img src="./img/course-english.png" class="card-img-top"
-              alt="Laptop" style="width: 100%; height: 150px;"/>
+  
+            <img src="./img/course-piano.PNG" class="card-img-top" alt="Laptop" style="width: 100%; height: 150px;" />
             <div class="card-body">
               <div class="d-flex justify-content-between mb-3">
-                <h5 class="mb-0 ">Tiếng anh giao tiếp</h5>
+                <h5 class="mb-0 ">Khóa pinano nâng cao</h5>
                 <!-- <h5 class="text-dark mb-0">$999</h5> -->
               </div>
-              <div class="d-flex justify-content-between mb-3" style="margin-top: 42px;">
-                <h6 class="text-dark mb-0">2.000.000 VNĐ</h6>
+              <div class="d-flex justify-content-between mb-3">
+                <h6 class="text-dark mb-0">3.000.000 VNĐ</h6>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="small"><a href="#!" class="text-muted">Giáo viên: Khương Nguyễn</a></p>
+                <p class="small"><a href="#!" class="text-muted">Giáo viên: Lê Thị Hải Yến</a></p>
               </div>
-
-
+  
+  
               <div class="d-flex justify-content-md-between">
                 <div class="text-warning">
                   <i class="fa fa-star"></i>
@@ -241,10 +268,10 @@
                 </div>
                 <!-- <p>&emsp; &emsp; &emsp;</p> -->
                 <div>
-                  <p class="text-muted mb-2">25 đánh giá</p>
+                  <p class="text-muted mb-2">32 đánh giá</p>
                 </div>
-
-
+  
+  
               </div>
             </div>
           </div>
@@ -357,3 +384,9 @@
 
 
 </html>
+
+<script>
+  function gotoHomePage(){
+    window.location.href = "/Resgiter-Course/index.html";
+  }
+</script>
