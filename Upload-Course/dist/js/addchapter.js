@@ -79,7 +79,7 @@ function appendCourse(nameCard, numberCard) {
                 <div class="row">
                     <div class="col-sm-12">
                     <textarea class="form-control" name="txtDescription"
-                        style="height: 300px;" placeholder="Nội dung mô tả" required>Nội dung mô tả</textarea>
+                        style="height: 300px;" placeholder="Nội dung mô tả" required></textarea>
                     </div>
                 </div>
                 </div>
