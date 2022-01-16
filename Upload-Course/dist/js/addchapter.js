@@ -111,8 +111,8 @@ function appendCourse(nameCard, numberCard) {
 
 function submitSuccess(event) {
     $('#submitSuccess').empty();
-    $('#btnSentRequest').prop('disabled', true);
-    $('#btnBack').prop('disabled', true);
+    $('#btnSentRequest').prop('hidden', true);
+    $('#btnBack').prop('hidden', true);
     $('#submitSuccess').html(
         `
             <div class="pt-1 d-flex align-items-center" style="height:50px; color:white; background-color:#00BA58; border-radius:10px;">
