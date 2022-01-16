@@ -110,29 +110,24 @@ function appendCourse(nameCard, numberCard) {
 }
 
 function submitSuccess(event) {
-    $('#output').html(
-        `<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-confirm" role="document">
-                <div class="modal-content" style="height:130px; color:white; background-color:#00BA58; border-radius:10px;">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-tool mt-1 mr-1" id="btnCloseModal" data-card-widget="remove" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body p-0 w-100">
-                        <div class="fade show w-100 pl-4" role="alert">
-                            <h4 class="alert-heading"><i class="fa fa-check"></i> Gửi Thành Công</h4>
-                            <h5>Vui lòng đợi hệ thống phê duyệt</h5>
-                        </div>
+    $('#submitSuccess').empty();
+    $('#btnSentRequest').prop('disabled', true);
+    $('#btnBack').prop('disabled', true);
+    $('#submitSuccess').html(
+        `
+            <div class="pt-1 d-flex align-items-center" style="height:50px; color:white; background-color:#00BA58; border-radius:10px;">
+                <div class="modal-body p-0 w-100">
+                    <div class="w-100 pl-4 d-flex justify-content-center">
+                        <h4 class="alert-heading"><i class="fa fa-check"></i> Gửi Thành Công. Vui lòng đợi hệ thống phê duyệt</h4>
                     </div>
                 </div>
             </div>
-        </div>`
+            <div class="w-100 pl-4 d-flex justify-content-center mt-2">
+                <a class="btn btn-primary m-1" href="./starter.html" role="button">Quay Lại Trang Chủ</a>
+                <a class="btn btn-primary m-1" href="./../Resgiter-Course/course.html" role="button">Xem Thử Khóa Học</a>
+            </div>
+        `
     );
-    $('#myModal').modal("show");
-    // setTimeout(
-    //     function () {
-    //         location.href = `./starter.html`;
-    // }, 1000);
 }
 
 $(document).ready(() => {
@@ -182,10 +177,6 @@ $(document).ready(() => {
             $(`${classFileUpload}`).addClass('active');
             $(`#noFileMovie-${currentInput}`).text(filename.replace("C:\\fakepath\\", ""));
         }
-    });
-
-    $('#output').on('click', '#btnCloseModal',function(){
-        $('#myModal').modal("hide");
     });
 });
 

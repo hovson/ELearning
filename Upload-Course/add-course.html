@@ -282,7 +282,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <div class="tab-pane fade" id="step3">
                           <h4>Gửi kiểm duyệt khóa học</h4>
-                          <div class="mb-3 mt-4">
+                          <div class="mb-3 mt-4" id="submitSuccess">
                             <h5>Cảm ơn bạn đã tạo khóa học trên Elearning</h5>
                             <p>Hệ thống sẽ tiến hành quá trình kiểm duyệt sau khi bạn nhấn gửi kiểm duyệt.<br>Thời gian
                               phản hồi tối đa 7 ngày.</p>
@@ -290,12 +290,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                       </div>
                       <div class="row justify-content-between">
-                        <div class="col-auto"><button type="button" class="btn btn-secondary"
+                        <div class="col-auto"><button type="button" class="btn btn-secondary" id="btnBack"
                             data-enchanter="previous">Quay Lại<i class="fa fa-undo ml-2"></i></button></div>
                         <div class="col-auto">
                           <button type="button" class="btn btn-primary" data-enchanter="next">Tiếp Tục<i
                               class="fa fa-arrow-right ml-2"></i></button>
-                          <button type="button" class="btn btn-primary" data-enchanter="finish" onclick="submitSuccess(this)">Gửi Kiểm Duyệt<i
+                          <button type="button" class="btn btn-primary"  id="btnSentRequest" data-enchanter="finish" onclick="submitSuccess(this)">Gửi Kiểm Duyệt<i
                               class="fa fa-paper-plane ml-2"></i></button>
                         </div>
                       </div>
