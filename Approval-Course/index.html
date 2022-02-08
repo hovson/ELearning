@@ -1,1 +1,398 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Elearning | Teacher</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-user"></i>
+            <span class="ml-1">Alexander Pierce</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <!-- <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle"> -->
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    <i class="fa fa-info mr-3"></i>
+                    Thông Tin Tài Khoản
+                    <!-- <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span> -->
+                  </h3>
+                  <!-- <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p> -->
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <!-- <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3"> -->
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    <i class="fa fa-sign-out-alt mr-2" aria-hidden="true"></i>
+                    Đăng Xuất
+                    <!-- <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span> -->
+                  </h3>
+                  <!-- <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p> -->
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Giáo viên</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexander Pierce</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Quản lý
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Quản Lý Khóa Học</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Quản Tài Khoản</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Quản Lý Khóa Học</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                <li class="breadcrumb-item active">Quản Lý Khóa Học</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row mb-3 p-2" style="background-color: #1F3868;">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btnCourse">Khóa Học Đã Duyệt</button>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btnCourse">Khóa Học Chưa Duyệt</button>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btnCourse">Khóa Học Đã Từ Chối</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 d-inline-flex justify-content-start p-0 pl-2">
+              <a type="button" href="./add-course.html" class="btn btn-primary w-50 h-75 p-1"><strong>Thêm Khóa Học
+                  Mới</strong><i class="fa fa-plus-circle ml-2"></i></a>
+            </div>
+            <div class="col-lg-4 text-lg-center">
+              <h3><strong>Danh Sách Khóa Học</strong></h3>
+            </div>
+            <div class="col-lg-4">
+              <!-- SEARCH FORM -->
+              <form class="form-inline  d-flex-inline justify-content-end mb-2">
+                <div class="input-group input-group-md w-75">
+                  <input class="form-control" type="search" placeholder="Tìm Kiếm" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Main content -->
+          <table class="table table-striped table-hover table-bordered">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tiêu Đề <i class="fa fa-sort"></i></th>
+                <th>Tóm Tắt</th>
+                <th>Chuyên Mục <i class="fa fa-sort"></i></th>
+                <th>Tác Giả</th>
+                <th>Thời Gian Đăng <i class="fa fa-sort"></i></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Thomas Hardy</td>
+                <td>89 Chiaroscuro Rd.</td>
+                <td>Portland</td>
+                <td>97219</td>
+                <td>USA</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Maria Anders</td>
+                <td>Obere Str. 57</td>
+                <td>Berlin</td>
+                <td>12209</td>
+                <td>Germany</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Fran Wilson</td>
+                <td>C/ Araquil, 67</td>
+                <td>Madrid</td>
+                <td>28023</td>
+                <td>Spain</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dominique Perrier</td>
+                <td>25, rue Lauriston</td>
+                <td>Paris</td>
+                <td>75016</td>
+                <td>France</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Martin Blank</td>
+                <td>Via Monte Bianco 34</td>
+                <td>Turin</td>
+                <td>10100</td>
+                <td>Italy</td>
+                <td>
+                  <a href="./approveCourse.html" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                  <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /.content -->
+          <!-- /.row -->
+          <div class="row d-flex justify-content-center mt-3 mb-3">
+            <!-- Default box -->
+            <nav aria-label="Contacts Page Navigation">
+              <ul class="pagination justify-content-center m-0">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+    </div>
+
+    <!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer mt-3">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Anything you want
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2021-2022 <a href="#">Elearning.io</a>.</strong> All rights reserved.
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+</body>
+
+</html>
