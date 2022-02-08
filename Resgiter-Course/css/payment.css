@@ -17,3 +17,12 @@
 .mrauto{
     margin-left: 23%;
 }
+
+.price{
+    font-size: large;
+}
+
+.total_price{
+    
+    color: red;
+}
