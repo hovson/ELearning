@@ -116,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="" class="img-circle elevation-2" id="avatar" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block" style="text-decoration: none;">Alexander Pierce</a>
@@ -262,7 +262,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="image-content">
                                 <small id="inputImageHelp"></small>
                                 <div class="file-loading">
-                                  <input id="input-b3" name="input_b3[]" type="file" class="file" multiple accept="image/*"
+                                  <input id="input-b3" name="input_b3" type="file" class="file" multiple accept="image/*"
                                     data-show-upload="false" data-show-caption="true"
                                     data-msg-placeholder="Chọn hình đại diện">
                                 </div>
@@ -293,7 +293,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-auto"><button type="button" class="btn btn-secondary" id="btnBack"
                             data-enchanter="previous">Quay Lại<i class="fa fa-undo ml-2"></i></button></div>
                         <div class="col-auto">
-                          <button type="button" class="btn btn-primary" data-enchanter="next">Tiếp Tục<i
+                          <button type="button" class="btn btn-primary" data-enchanter="next" onclick="saveCourse()">Tiếp Tục<i
                               class="fa fa-arrow-right ml-2"></i></button>
                           <button type="button" class="btn btn-primary"  id="btnSentRequest" data-enchanter="finish" onclick="submitSuccess(this)">Gửi Kiểm Duyệt<i
                               class="fa fa-paper-plane ml-2"></i></button>
@@ -365,6 +365,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         txtCategory: {
           required: true,
         },
+        tenChuong: {
+          required: true,
+        }
+        // input_b3: {
+        //   required: true,
+        // }
       },
       messages: {
         txtNameCourse: {
@@ -379,6 +385,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         txtCategory: {
           required: "Chọn chuyên mục cho khóa học",
         },
+        input_b3: {
+          required: "Chọn hình ảnh đại diện cho khóa học",
+        },
+        tenChuong: {
+          required: "as",
+        }
       },
     });
     const wizard = new Enchanter('registration', {}, {
@@ -413,6 +425,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
         browseOnZoneClick: true,
       });
     }); 
+  </script>
+
+  <script>
+  function saveCourse() {
+    localStorage.setItem("nameCourse",document.getElementById("inputNameCourse").value);
+    localStorage.setItem("category",document.getElementById("inputCategory").value);
+    localStorage.setItem("price",document.getElementById("inputPriceCourse").value);
+    localStorage.setItem("description",document.getElementById("inputDescriptionCourse").value);
+    localStorage.setItem("avatar","photo4.jpg");
+    var numberCard = $("#btnAddChapter").attr('data-number-card-chapter');
+    localStorage.setItem("chuong1",document.getElementById("chuong").value);
+    localStorage.setItem("bai1",document.getElementById("bai").value);
+  }
   </script>
 </body>
 

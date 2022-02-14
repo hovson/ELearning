@@ -8,9 +8,10 @@ function append(event) {
         <div class="card-header">
         <h3 class="card-title w-75">
             <div class="w-75">
-            <input type="text" class="form-control w-100" placeholder="Tên chương">
+            <input type="text" id="chuong${numberCard}" class="form-control w-100" placeholder="Tên chương" required>
             </div>
         </h3>
+        
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                 class="fas fa-minus"></i>
@@ -45,7 +46,7 @@ function appendCourse(nameCard, numberCard) {
             <div class="row">
                 <div class="card-title col-8 d-flex align-items-center">
                     <div class="w-75 d-flex">
-                        <input type="text" class="form-control w-100" placeholder="Tên Bài Học">
+                        <input type="text" id="bai" class="form-control w-100" placeholder="Tên Bài Học" required>
                     </div>
                 </div>
                 <div class="form-check col-2 d-flex align-items-center">
@@ -124,7 +125,7 @@ function submitSuccess(event) {
             </div>
             <div class="w-100 pl-4 d-flex justify-content-center mt-2">
                 <a class="btn btn-primary m-1" href="./starter.html" role="button">Quay Lại Trang Chủ</a>
-                <a class="btn btn-primary m-1" href="./../Resgiter-Course/course.html" role="button">Xem Thử Khóa Học</a>
+                <a class="btn btn-primary m-1" href="./LearnCourse/index.html" role="button">Xem Thử Khóa Học</a>
             </div>
         `
     );

@@ -8,7 +8,7 @@ function append(event) {
         <div class="card-header">
         <h3 class="card-title w-75">
             <div class="w-75">
-            <input type="text" class="form-control w-100" placeholder="Tên chương">
+            <input type="text" name="tenChuong" class="form-control w-100" placeholder="Tên chương">
             </div>
         </h3>
         <div class="card-tools">
