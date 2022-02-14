@@ -47,6 +47,25 @@ $('#output').html(
 $('#myModal').modal("show");
 }
 
+function openModalApproveCourseSuccess(event) {
+    $(".divApproveCourse").hide();
+    $('#output').html(
+        `<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-confirm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-0">
+                                            <div class="alert alert-success alert-dismissible fade show m-0" role="alert">
+                                                <h4 class="alert-heading"><i class="fa fa-check"></i> Thành Công</h4>
+                                                <strong>Bài học Đã Được Duyệt Thành Công</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`
+    );
+    $('#myModal').modal("show");
+    }
+
 function openModalDeniedSuccess(event) {
     $(".divApproveCourse").hide();
     $('#output').html(
