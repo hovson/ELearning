@@ -5867,7 +5867,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   border-color: #1b1e21;
 }
 
-.close, .mailbox-attachment-close {
+.mailbox-attachment-close {
   float: right;
   font-size: 1.5rem;
   font-weight: 700;
@@ -5877,7 +5877,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   opacity: .5;
 }
 
-.close:hover, .mailbox-attachment-close:hover {
+.mailbox-attachment-close:hover {
   color: #000;
   text-decoration: none;
 }
@@ -6104,6 +6104,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  color: #FFFFFF !important;
 }
 
 .modal-body {
@@ -31275,6 +31276,14 @@ a.text-muted:hover {
   width: 250px !important;
 }
 
+.btnCourseFocus{
+  width:220px !important; 
+  background-color: #0056b3 !important; 
+  color: #FFFFFF !important; 
+  border: 1px solid #838282 !important; 
+  border-radius: 10px !important;
+}
+
 .table-responsive {
   margin: 30px 0;
 }
@@ -31367,9 +31376,22 @@ table.table td i {
   background-color: #E5E5E5;
   color: #3F3A3A;
 }
-#groupBTNApprove, #groupContentArea {
-  background-color: #1C1818;
+#groupBTNApprove {
+  background-color: #3a3737;
 }
-#exampleModalLabel, .closeButton, .labelMessageText {
-  color: #C8D0DD;
+
+#groupContentArea {
+  background-color: #3a3737;
+}
+
+#exampleModalLabel {
+  color: #FFFFFF !important;
+}
+
+.labelMessageText{
+  color: #FFFFFF !important;
+}
+
+.closeButton {
+  color: #FFFFFF !important;
 }
