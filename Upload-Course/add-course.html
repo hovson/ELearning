@@ -273,7 +273,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="tab-pane fade" id="step2">
                           <h4>Nội dung khóa học</h4>
                           <div class="mb-3" id="cardBody">
-                            
+                              
                           </div>
                           <div class="mb-3">
                             <button type="button" class="btn addChapter" id="btnAddChapter" onclick="append(this)"
@@ -365,9 +365,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         txtCategory: {
           required: true,
         },
-        tenChuong: {
-          required: true,
-        }
         // input_b3: {
         //   required: true,
         // }
@@ -435,8 +432,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     localStorage.setItem("description",document.getElementById("inputDescriptionCourse").value);
     localStorage.setItem("avatar","photo4.jpg");
     var numberCard = $("#btnAddChapter").attr('data-number-card-chapter');
-    localStorage.setItem("chuong1",document.getElementById("chuong").value);
-    localStorage.setItem("bai1",document.getElementById("bai").value);
+    // var classNameCard = 'card_' + numberCard;
+    // var classNameChuong = 'chuong' + numberCard;
+    console.log("As", numberCard);
+    localStorage.setItem("chuong1",document.getElementById('chuong1').value);
+    localStorage.setItem("chuong2",document.getElementById("chuong2").value);
+    localStorage.setItem("bai11",document.getElementById("bai11").value);
+    localStorage.setItem("bai12",document.getElementById("bai12").value);
+    localStorage.setItem("bai21",document.getElementById("bai21").value);
+
+
+
+    // localStorage.setItem("bai1",document.getElementById("bai").value); 
   }
   </script>
 </body>

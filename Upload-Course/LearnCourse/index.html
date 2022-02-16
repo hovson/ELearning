@@ -90,74 +90,32 @@
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
                   <h4 class="panel-title">
-                    <a id="chuong" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                    <a id="chuong1" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                       aria-expanded="true" aria-controls="collapseOne">
-                      
+
                     </a>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
+                  aria-labelledby="headingOne">
                   <div class="panel-body">
-                    <p style="color: #0975B4;" id="bai">  <b>Bài 1:</b></p>
-                    <p><b>Bài 2: Tư thế cầm đàn</b></p>
-                    <p><b>Bài 3: Các đặt tay trên cần đàn</b></p>
+                    <p> <b id="bai11"></b></p>
+                    <p><b id="bai12"></b></p>
                   </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTwo">
                   <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                    <a class="collapsed" id="chuong2" role="button" data-toggle="collapse" data-parent="#accordion"
                       href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Chương 2: Các hợp âm cơ bản
+
                     </a>
                   </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
-                    <p><b>Bài 1: Các hợp âm trưởng cơ bản</b></p>
-                    <p><b>Bài 2: Các hợp âm thứ cơ bản</b></p>
-                    <p><b>Bài 3: Các hợp âm 7 cơ bản</b></p>
-                    <p><b>Bài 4: Các hợp âm nâng cao</b></p>
-                    <p><b>Bài 5: Cách tập các hợp âm chặn hiệu quả nhất</b></p>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Chương 3: Các điệu cơ bản
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="panel-body">
-                    <p><b>Bài 1: Giới thiệu những điệu thông dụng nhất</b></p>
-                    <p><b>Bài 2: Điệu surf chậm và áp dụng vào bài "Demond"</b></p>
-                    <p><b>Bài 3: Điệu surf nhanh và áp dụng vào bài "Forever alone"</b></p>
-                    <p><b>Bài 4: Điệu disco và áp dụng vào bài "Trở về"</b></p>
-                    <p><b>Bài 5: Điệu blue và áp dụng vào bài "Một nhà"</b></p>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFour">
-                  <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                      href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Chương 4: Tổng kết khóa học
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                  <div class="panel-body">
-                    <p><b>Bài 1: Những bài tốt nghiệp của khóa học</b></p>
-                    <p><b>Bài 2: Các hát đúng tone và đúng nhịp</b></p>
-                    <p><b>Bài 3: Định hướng trong tương lai</b></p>
-                    <p><b>Bài 4: Tổng kết</b></p>
-                    <p><b>Bài 5: Giới thiệu các khóa học nâng cao hơn</b></p>
+                    <p><b id="bai21"></b></p>
                   </div>
                 </div>
               </div>
@@ -601,12 +559,16 @@
 
   })(jQuery);
 
-  function gotoHomePage(){
+  function gotoHomePage() {
     window.location.href = "/Resgiter-Course/index.html";
   }
 
   document.getElementById("nameCourse").innerHTML = localStorage.getItem("nameCourse");
-  document.getElementById("chuong").innerHTML = localStorage.getItem("chuong1");
-  document.getElementById("bai").innerHTML = localStorage.getItem("bai1");
+  document.getElementById("chuong1").innerHTML = 'Chương 1: ' + localStorage.getItem("chuong1");
+  document.getElementById("bai11").innerHTML = 'Bài 1:' + localStorage.getItem("bai11");
+  document.getElementById("bai12").innerHTML = 'Bài 2:' + localStorage.getItem("bai12");
+  document.getElementById("chuong2").innerHTML = 'Chương 2: ' + localStorage.getItem("chuong2");
+  document.getElementById("bai21").innerHTML = 'Bài 1:' + localStorage.getItem("bai21");
+
 
 </script>

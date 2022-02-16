@@ -1,17 +1,19 @@
 function append(event) {
-    var cardBody = $("#cardBody");
-    var numberCard = $("#btnAddChapter").attr('data-number-card-chapter');
-    var classNameCard = 'card_' + numberCard;
-    var classNameCourse = 'list_course_' + numberCard;
-    cardBody.append(`
+  var cardBody = $("#cardBody");
+  var classNameCard = "card_" + numberCard;
+  var numberCard = $("#btnAddChapter").attr("data-number-card-chapter");
+  var classNameChuong = "chuong" + numberCard;
+  console.log("name", classNameChuong);
+
+  var classNameCourse = "list_course_" + numberCard;
+  cardBody.append(`
     <div class="card mb-3 ${classNameCard}">
         <div class="card-header">
         <h3 class="card-title w-75">
             <div class="w-75">
-            <input type="text" id="chuong${numberCard}" class="form-control w-100" placeholder="Tên chương" required>
+            <input type="text" id="${classNameChuong}" class="form-control w-100" placeholder="Tên chương" required>
             </div>
         </h3>
-        
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                 class="fas fa-minus"></i>
@@ -28,25 +30,26 @@ function append(event) {
             <button type="button" class="btn addChapter btnAddCourse" data-number=1 data-card-number="${classNameCourse}"
             data-number-card-chapter=1><i class="fa fa-plus-circle mr-2"></i>Thêm bài học</button>
         </div>
-    </div>`
-    );
-    numberCard = parseInt(numberCard) + 1;
-    $("#btnAddChapter").attr('data-number-card-chapter', numberCard);
+    </div>`);
+  numberCard = parseInt(numberCard) + 1;
+  $("#btnAddChapter").attr("data-number-card-chapter", numberCard);
 }
 
 function appendCourse(nameCard, numberCard) {
-    var currentCourse = nameCard;
-    var numberCurrentCourse = numberCard;
-    var classNameCourse = 'course_' + numberCurrentCourse;
-    var cardBody = $(`.${currentCourse}`);
-
-    cardBody.append(`
+  var number = $("#btnAddChapter").attr("data-number-card-chapter");
+  var currentCourse = nameCard;
+  var numberCurrentCourse = numberCard;
+  var classNameCourse = "course_" + numberCurrentCourse;
+  var cardBody = $(`.${currentCourse}`);
+  var classNameBai = "bai" + (number - 1) + numberCurrentCourse;
+  console.log("bai", classNameBai);
+  cardBody.append(`
     <div class="card mb-3 ${classNameCourse}">
         <div class="card-header">
             <div class="row">
                 <div class="card-title col-8 d-flex align-items-center">
                     <div class="w-75 d-flex">
-                        <input type="text" id="bai" class="form-control w-100" placeholder="Tên Bài Học" required>
+                        <input type="text" id="${classNameBai}" class="form-control w-100" placeholder="Tên Bài Học" required>
                     </div>
                 </div>
                 <div class="form-check col-2 d-flex align-items-center">
@@ -106,16 +109,15 @@ function appendCourse(nameCard, numberCard) {
             </div>
             <!-- Tabs content -->
         </div>
-    </div>`
-    );
+    </div>`);
 }
 
 function submitSuccess(event) {
-    $('#submitSuccess').empty();
-    $('#btnSentRequest').prop('hidden', true);
-    $('#btnBack').prop('hidden', true);
-    $('#submitSuccess').html(
-        `
+  $("#submitSuccess").empty();
+  $("#btnSentRequest").prop("hidden", true);
+  $("#btnBack").prop("hidden", true);
+  $("#submitSuccess").html(
+    `
             <div class="pt-1 d-flex align-items-center" style="height:50px; color:white; background-color:#00BA58; border-radius:10px;">
                 <div class="modal-body p-0 w-100">
                     <div class="w-100 pl-4 d-flex justify-content-center">
@@ -128,56 +130,57 @@ function submitSuccess(event) {
                 <a class="btn btn-primary m-1" href="./LearnCourse/index.html" role="button">Xem Thử Khóa Học</a>
             </div>
         `
-    );
+  );
 }
 
 $(document).ready(() => {
-    $("#cardBody").on('click', '.btnRemoveCard', function () {
-        var nameCard = $(this).attr('data-card-number');
-        var cardRemove = '.' + nameCard;
-        setTimeout(function () {
-            $(`${cardRemove}`).remove();
-        }, 1000);
-    });
+  $("#cardBody").on("click", ".btnRemoveCard", function () {
+    var nameCard = $(this).attr("data-card-number");
+    var cardRemove = "." + nameCard;
+    setTimeout(function () {
+      $(`${cardRemove}`).remove();
+    }, 1000);
+  });
 
-    $("#cardBody").on('click', '.btnAddCourse', function () {
-        var nameCard = $(this).attr('data-card-number');
-        var numberCard = $(this).attr('data-number');
-        appendCourse(nameCard, numberCard);
-        numberCard = parseInt(numberCard) + 1;
-        $(this).attr('data-number', numberCard);
-    });
+  $("#cardBody").on("click", ".btnAddCourse", function () {
+    var nameCard = $(this).attr("data-card-number");
+    var numberCard = $(this).attr("data-number");
+    appendCourse(nameCard, numberCard);
+    numberCard = parseInt(numberCard) + 1;
+    $(this).attr("data-number", numberCard);
+  });
 
-    $('.tab-content').on('click change', '.chooseFileContent', function () {
-        var currentInput = $(this).attr('data-number');
-        var currentClassName = 'chooseFileContent-' + currentInput;
-        var classFileName = '#chooseFileContent-' + currentInput;
-        var classFileUpload = '.file-upload-content-' + currentInput;
-        var filename = $(`${classFileName}`).val();
-        if (/^\s*$/.test(filename)) {
-            $(`${classFileUpload}`).removeClass('active');
-            $(`#noFileContent-${currentInput}`).text("");
-        }
-        else {
-            $(`${classFileUpload}`).addClass('active');
-            $(`#noFileContent-${currentInput}`).text(filename.replace("C:\\fakepath\\", ""));
-        }
-    });
+  $(".tab-content").on("click change", ".chooseFileContent", function () {
+    var currentInput = $(this).attr("data-number");
+    var currentClassName = "chooseFileContent-" + currentInput;
+    var classFileName = "#chooseFileContent-" + currentInput;
+    var classFileUpload = ".file-upload-content-" + currentInput;
+    var filename = $(`${classFileName}`).val();
+    if (/^\s*$/.test(filename)) {
+      $(`${classFileUpload}`).removeClass("active");
+      $(`#noFileContent-${currentInput}`).text("");
+    } else {
+      $(`${classFileUpload}`).addClass("active");
+      $(`#noFileContent-${currentInput}`).text(
+        filename.replace("C:\\fakepath\\", "")
+      );
+    }
+  });
 
-    $('.tab-content').on('click change', '.chooseFileMovie', function () {
-        var currentInput = $(this).attr('data-number');
-        var currentClassName = 'chooseFileMovie-' + currentInput;
-        var classFileName = '#chooseFileMovie-' + currentInput;
-        var classFileUpload = '.file-upload-movie-' + currentInput;
-        var filename = $(`${classFileName}`).val();
-        if (/^\s*$/.test(filename)) {
-            $(`${classFileUpload}`).removeClass('active');
-            $(`#noFileMovie-${currentInput}`).text("");
-        }
-        else {
-            $(`${classFileUpload}`).addClass('active');
-            $(`#noFileMovie-${currentInput}`).text(filename.replace("C:\\fakepath\\", ""));
-        }
-    });
+  $(".tab-content").on("click change", ".chooseFileMovie", function () {
+    var currentInput = $(this).attr("data-number");
+    var currentClassName = "chooseFileMovie-" + currentInput;
+    var classFileName = "#chooseFileMovie-" + currentInput;
+    var classFileUpload = ".file-upload-movie-" + currentInput;
+    var filename = $(`${classFileName}`).val();
+    if (/^\s*$/.test(filename)) {
+      $(`${classFileUpload}`).removeClass("active");
+      $(`#noFileMovie-${currentInput}`).text("");
+    } else {
+      $(`${classFileUpload}`).addClass("active");
+      $(`#noFileMovie-${currentInput}`).text(
+        filename.replace("C:\\fakepath\\", "")
+      );
+    }
+  });
 });
-
