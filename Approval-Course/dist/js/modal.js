@@ -4,7 +4,7 @@ function openModalDeniedCourse(event) {
             <div class="modal-dialog modal-confirm" role="document">
                 <div class="modal-content" id="groupContentArea">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Từ Chối Khóa Học</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Từ Chối Bài Học</h5>
                         <button type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -56,7 +56,7 @@ function openModalApproveCourseSuccess(event) {
                                         <div class="modal-body p-0">
                                             <div class="alert alert-success alert-dismissible fade show m-0" role="alert">
                                                 <h4 class="alert-heading"><i class="fa fa-check"></i> Thành Công</h4>
-                                                <strong>Bài học Đã Được Duyệt Thành Công</strong>
+                                                <strong>Bài Học Đã Được Duyệt Thành Công</strong>
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ function openModalDeniedSuccess(event) {
                                         <div class="modal-body p-0">
                                             <div class="alert alert-success alert-dismissible fade show m-0" role="alert">
                                                 <h4 class="alert-heading"><i class="fa fa-check"></i> Thành Công</h4>
-                                                <strong>Từ Chối Khóa Học Thành Công</strong>
+                                                <strong>Từ Chối Bài Học Thành Công</strong>
                                             </div>
                                         </div>
                                     </div>

@@ -11463,8 +11463,7 @@ a {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  height: 600px;
   overflow: hidden;
 }
 
